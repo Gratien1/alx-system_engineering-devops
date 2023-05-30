@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# gets Apache to run on containe
+
+apt-get update
+apt-get install apache2 -y
+ufw allow 'Apache'
+service apache2 start
+chmod "664" /var/www/html/index.html
+echo 'Hello Holberton' > /var/www/html/index.html
