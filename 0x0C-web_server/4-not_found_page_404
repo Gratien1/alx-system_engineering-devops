@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#config a new server and  permanat redirection and custom 404 error page
+
+apt update
+apt install -y nginx
+echo "server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+	index index.html;
+
+	# redirection config
+	#here_redirect_config
+
+	# not found page 404
+	#here_404_not_found_page_config
+}" > /etc/nginx/sites-available/default
+echo 'Hello World!' > /var/www/html/index.html
+redirect="#here_redirect_config"
+redirect_path="location /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+sed -i "s|$redirect|$redirect_path|" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+not_found="#here_404_not_found_page_config"
+not_found_config="error_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\tinternal;\n\t}"
+sed -i "s|$not_found|$not_found_config|" /etc/nginx/sites-available/default
+service nginx restart
