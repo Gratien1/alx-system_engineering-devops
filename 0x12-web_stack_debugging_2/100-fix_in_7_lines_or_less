@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Config nginx so that it runs as nginx user and listen to all active IPs ports
+# Config nginx so that it  runs as nginx user and listen to all active IPs ports
 pkill apache2 nginx
 chown nginx /etc/nginx/nginx.conf
 chmod u+r /etc/nginx/nginx.conf
