@@ -18,23 +18,6 @@ qui permet l'ajout, la suppression, la modification et la recherche des clients,
 ainsi que le suivi des mouvements ( réception / livraison des gadgets aux clients avec les quantités respectives )
 l'application permet aussi l'impression des données affichées et de les télécharger sous format XML.
 
-Cette application est faite au cours d'un stage d'été qui a eu lieu pendant le mois de Juillet 2014 au sein de la société Adwya.
-
 Le fichier `adwya.sql` crée les différentes tables de la base de données nommée `adwya` utilisées par l'application
-ainsi que les différentes contraintes ( clés primaires et étrangères ) et ajoute deux utilisateurs pour des raisons de test : l'utilisateur `a` ( administrateur ) et l'utilisateur `b` ( utilisateur régulier : Il n'a pas le droit de modifier ou supprimer les données )
   
 Le dossier `application/` contient l'application alors que le dossier `screenshots/` contient quelques captures d'écran de l'application.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/stoufa/simple-gestion-stock-php/master/screenshots/1.png" alt="screenshot"/>
-</p>
-
-<hr>
-
-<img src="https://emojis.slackmojis.com/emojis/images/1485555744/1681/bitcoin.png" valign="middle" width="40" /> &nbsp; If you found this helpful, consider helping me by sending some Bitcoins to the following address. Thank you 😊
-
-<pre align="center">
-15m4Prjz4WLSsCgBcZTa62cUetiwo6sZKg
-</pre>
-
-
